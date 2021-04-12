@@ -9,7 +9,7 @@ public class App {
     }
 
     static int select() {
-        System.out.println("sel=")
+        System.out.println("sel=");
         Scanner in = new Scanner(System.in);
         int sel = in.nextInt();
         return sel;
