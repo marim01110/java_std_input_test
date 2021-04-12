@@ -1,0 +1,16 @@
+version: "3"
+services:
+  java_dev:
+    image: marimo1110/debian_java_dev
+    #build: .
+    command: sleep infinity
+    volumes:
+      - ../:/workdir
+    environment:
+      SHELL: "/bin/bash"
+    tty: true
+    # to use gdb
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
