@@ -6,6 +6,7 @@ services:
     command: sleep infinity
     volumes:
       - ../:/workdir
+      - ~/.gitconfig:/root/.gitconfig
     environment:
       SHELL: "/bin/bash"
     tty: true
