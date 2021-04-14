@@ -3,15 +3,21 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        select();
-        q1();
-        q2();
+        //select();
+        switch(select()){
+            case 1:     q1();
+                        break;
+            case 2:     q2();
+                        break;
+            default:    break;
+        }
     }
 
     static int select() {
         System.out.println("sel=");
         Scanner in = new Scanner(System.in);
         int sel = in.nextInt();
+        in.close();
         return sel;
     }
 
