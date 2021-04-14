@@ -9,12 +9,14 @@ public class App {
                         break;
             case 2:     q2();
                         break;
+            case 3:     q3();
+                        break;
             default:    break;
         }
     }
 
     static int select() {
-        System.out.println("sel=");
+        System.out.print("実行する課題番号を入力してください[1,2,3]。");
         Scanner in = new Scanner(System.in);
         int sel = in.nextInt();
         in.close();
@@ -26,11 +28,22 @@ public class App {
     }
 
     static void q2(){
+        int loop = 0;
         Random rand = new Random();
-        int loop = 5;
+
+        System.out.print("乱数をいくつ表示しますか？");
+
+        Scanner in = new Scanner(System.in);
+        loop = in.nextInt();
+        in.close();
+        
         for(int i=0;i<loop;i++){
             int num = rand.nextInt(100);
             System.out.println(num);
         }
+    }
+
+    static void q3(){
+
     }
 }
