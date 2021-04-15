@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //select();
-        switch(select()){
+        System.out.println("実行する課題番号を入力してください。[1,2,3]");
+        switch(input_int()){
             case 1:     q1();
                         break;
             case 2:     q2();
@@ -15,12 +15,10 @@ public class App {
         }
     }
 
-    static int select() {
-        System.out.print("実行する課題番号を入力してください[1,2,3]。");
+    static int input_int() {
         Scanner in = new Scanner(System.in);
-        int sel = in.nextInt();
-        in.close();
-        return sel;
+        int tmp = in.nextInt();
+        return tmp;
     }
 
     static void q1() {
@@ -28,14 +26,12 @@ public class App {
     }
 
     static void q2(){
-        int loop = 0;
         Random rand = new Random();
+        int loop;
 
-        System.out.print("乱数をいくつ表示しますか？");
-
-        Scanner in = new Scanner(System.in);
-        loop = in.nextInt();
-        in.close();
+        System.out.println("乱数をいくつ表示しますか？");
+        loop = input_int();
+        System.out.println("乱数を" + loop + "[個]出力します。");
         
         for(int i=0;i<loop;i++){
             int num = rand.nextInt(100);
